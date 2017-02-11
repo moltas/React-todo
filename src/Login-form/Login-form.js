@@ -3,14 +3,9 @@ import React from 'react'
 
 class LoginForm extends React.Component {
 
-	constructor(props) {
-		super(props)
-	}
-
 	loginUser(event) {
-		alert('Hello!')
+		console.log('Hello!')
 	}
-
 
 	render() {
 		return (
@@ -22,7 +17,7 @@ class LoginForm extends React.Component {
 					<div className="form-group">
 						<input type="password" placeholder="Lösenord" className="form-control"></input>
 					</div>
-					<button type="submit" className="btn btn-success" onClick={this.loginUser()}>Logga In</button>
+					<button className="btn btn-success" onClick={this.loginUser}>Logga In</button>
 				</form>
 			</div>
 		);

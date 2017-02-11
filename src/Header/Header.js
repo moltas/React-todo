@@ -3,14 +3,14 @@ import './Header.css'
 import	LoginForm from '../Login-form/Login-form'
 
 // Stateless presentation component
-const Header = (props) => {
+const Header = () => {
 	return (
 		<nav className="navbar navbar-inverse navbar-fixed-top">
 			<div className="container">
 				<div className="navbar-header">
-					<a className="navbar-brand" href="#">React Todo</a>
+					<h2 className="navbar-brand">React Todo</h2>
 				</div>
-				<LoginForm />
+				<LoginForm/>
 			</div>
 		</nav>
 	)

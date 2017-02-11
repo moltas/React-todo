@@ -1,0 +1,13 @@
+
+
+.todo-list-container {
+	width: 50%;
+	height: auto;
+	margin: 200px auto 0;
+	padding: 10px;
+	position: relative;
+}
+
+.add-todo-button {
+	float: right;
+}
