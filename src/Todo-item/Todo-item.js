@@ -6,9 +6,8 @@ class TodoItem extends React.Component {
 	constructor(props){
 		super(props)
 		console.log(props)
-
 	}
-	
+
 	render() {
 		return (
 			<li className="todo-list-item">

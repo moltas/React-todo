@@ -7,21 +7,29 @@ class TodoList extends React.Component {
 	constructor(){
 		super()
 		this.state = {
-			numOfItems: 0
+			values: [],
+			inputValue: ''
 		}
 	}
 
+	handleInputChange(event) {
+		this.setState({inputValue: event.target.value})
+	}
+
 	addTodo(event) {
+		let newArray = this.state.values.slice()
+		newArray.push(this.state.inputValue)
 		this.setState({
-			numOfItems: this.state.numOfItems + 1
+			values: newArray,
+			inputValue: ''
 		})
 	}
 
 	render() {
 		let todoItems = []
 
-		for(let i = 0; i < this.state.numOfItems; i++){
-			todoItems.push(<TodoItem key={i} />)
+		for(let i = 0; i < this.state.values.length; i++){
+			todoItems.push(<TodoItem key={i} value={this.state.values[i]} />)
 		}
 
 		return (
@@ -32,12 +40,15 @@ class TodoList extends React.Component {
 				<ul className="todo-list">
 					{todoItems}
 				</ul>
-				<form className="form-inline">
-					<div className="form-group">
-						<input className="form-control" type="text" placeholder="Vad ska du göra?" />
-						<button className="add-todo-button btn btn-success" onClick={(event) => { this.addTodo(event)}}>Lägg till</button>
-					</div>
-				</form>
+				<div className="form-group">
+					<input 
+						className="form-control"
+						type="text" placeholder="Vad ska du göra?"
+						onChange={(event) => this.handleInputChange(event)}
+						value={this.state.inputValue}
+					/>
+					<button className="add-todo-button btn btn-success" onClick={(event) => this.addTodo(event)}>Lägg till</button>
+				</div>
 			</div>
 		);
   }
