@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Header/Header';
 import TodoList from './Todo-list/Todo-list';
 
-class App extends Component {
+class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header/>
-				<TodoList/>
+				<Header />
+				<TodoList />
 			</div>
-		);
+		)
 	}
 }
 

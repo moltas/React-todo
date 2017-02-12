@@ -5,23 +5,14 @@ class TodoItem extends React.Component {
 
 	constructor(props){
 		super(props)
-
 		console.log(props)
 
-		this.state = {
-			todoItems: [
-				{value: "milk"},
-				{value: "sugar"},
-				{value: "grain"}
-			]
-		}
-
-		
 	}
+	
 	render() {
 		return (
 			<li className="todo-list-item">
-				<span>Hello!</span>
+				<span>{this.props.value}</span>
 				<span className="delete-button">X</span>
 			</li>
 		);

@@ -1,6 +1,5 @@
 import React from 'react'
 import './Todo-list.css'
-
 import TodoItem from '../Todo-item/Todo-item'
 
 class TodoList extends React.Component {
@@ -8,8 +7,7 @@ class TodoList extends React.Component {
 	constructor(){
 		super()
 		this.state = {
-			numOfItems: 0,
-			value: ''
+			numOfItems: 0
 		}
 	}
 
@@ -23,7 +21,7 @@ class TodoList extends React.Component {
 		let todoItems = []
 
 		for(let i = 0; i < this.state.numOfItems; i++){
-			todoItems.push(<TodoItem key={i} value={this.state.value} />)
+			todoItems.push(<TodoItem key={i} />)
 		}
 
 		return (
@@ -36,7 +34,7 @@ class TodoList extends React.Component {
 				</ul>
 				<form className="form-inline">
 					<div className="form-group">
-						<input className="form-control" type="text" placeholder="Vad ska du göra?" ref={input => this.textInput = input} />
+						<input className="form-control" type="text" placeholder="Vad ska du göra?" />
 						<button className="add-todo-button btn btn-success" onClick={(event) => { this.addTodo(event)}}>Lägg till</button>
 					</div>
 				</form>
