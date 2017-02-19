@@ -1,0 +1,19 @@
+
+
+.input-panel {
+	display: flex;
+	background: gray;
+	padding: 20px 10px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.input-field {
+	float: left;
+}
+
+.submit-button {
+	float: left;
+}

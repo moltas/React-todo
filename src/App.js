@@ -7,6 +7,10 @@ class App extends React.Component {
 		return (
 			<div>
 				<Header />
+
+				<div>
+					<h1>Lägg till saker att göra</h1>
+				</div>
 				<TodoList />
 			</div>
 		)

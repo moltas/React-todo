@@ -3,20 +3,28 @@
 .todo-list-item {
 	display: block;
 	padding: 20px 10px;
+	margin-bottom: 5px;
 	position: relative;
-	border: 1px solid black;
-	border-top: none;
+	border: 3px solid black;
+	/*border-top: none;*/
+	border-radius: 5px;
 }
 
-.todo-list-item:first-child {
+/*.todo-list-item:first-child {
 	border-top: 1px solid black;
+}*/
+
+.todo-title {
+
 }
 
 .delete-button {
-	display: inline-block;
-	float: right;
-	color: red;
-	font-size: 25px;
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	transform: translateY(-50%);
+	color: rgba(255, 0, 0, 0.65);
+	font-size: 20px;
 	cursor: pointer;
 }
 
