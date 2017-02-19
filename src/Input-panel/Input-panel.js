@@ -8,7 +8,7 @@ const InputPanel = (props) => {
 				className="input-field form-control"
 				type="text"
 				placeholder="Vad ska du göra?"
-				value={props.inputValue}
+				value={props.value}
 				onChange={props.onChange}
 			/>
 			<button 

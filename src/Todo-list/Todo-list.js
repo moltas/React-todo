@@ -22,30 +22,32 @@ class TodoList extends React.Component {
 
 	addTodo(event) {
 		event.preventDefault()
-		console.log(this.state)
-		let newArray = this.state.todos.slice()
-		newArray.push({id: this.state.numberOfTodos + 1, value: this.state.inputValue})
-		this.setState({
-			todos: newArray,
-			inputValue: '',
-			numberOfTodos: this.state.numberOfTodos + 1
-		})
+
+		if (this.state.inputValue.length > 0) {
+			let newArray = this.state.todos.slice()
+			newArray.push({id: this.state.numberOfTodos + 1, value: this.state.inputValue})
+			this.setState({
+				todos: newArray,
+				inputValue: '',
+				numberOfTodos: this.state.numberOfTodos + 1
+			})
+		}
 	}
 
 	deleteTodo(event) {
-		console.log(event.target)
-
+		this.state.todos.splice(event, 1)
+		this.setState({todos: this.state.todos})
 	}
 
 	render() {
 		return (
 			<div>
 				<div className="todo-list-container clearfix">
-					{this.state.todos.map(todo => (
+					{this.state.todos.map((todo, i) => (
 						<TodoItem
 							key={todo.id}
 							value={todo.value}
-							onClick={this.deleteTodo.bind(this)}
+							onClick={this.deleteTodo.bind(this, i)}
 						/>
 					))}
 				</div>

@@ -2,20 +2,16 @@
 
 .todo-list-item {
 	display: block;
-	padding: 20px 10px;
+	padding: 10px;
 	margin-bottom: 5px;
 	position: relative;
 	border: 3px solid black;
-	/*border-top: none;*/
 	border-radius: 5px;
 }
 
-/*.todo-list-item:first-child {
-	border-top: 1px solid black;
-}*/
-
 .todo-title {
-
+	text-align: center;
+	font-size: 40px;
 }
 
 .delete-button {
@@ -26,5 +22,10 @@
 	color: rgba(255, 0, 0, 0.65);
 	font-size: 20px;
 	cursor: pointer;
+}
+
+.delete-button:hover {
+	color: rgb(163, 33, 29);
+	transition: color 0.5s;
 }
 
